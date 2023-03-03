@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
   title: Guarderia Canina
   description: |
-    Una API para una guarderia canina...
+    API para Guarderia Canina
   contact:
     name: Jimenez Puerto Pulido
   license:
@@ -11,9 +11,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
-- url: https://virtserver.swaggerhub.com/YEYSONESTEBANP_1/GuarderiaAPI/1.0.0
-  description: SwaggerHub API Auto Mocking
-- url: https://petstore.swagger.io/v2
+- url: https://localhost:8088
 tags:
 - name: clientes
   description: Todo sobre los clientes
