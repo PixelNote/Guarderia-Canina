@@ -8,14 +8,21 @@ import lombok.*;
 @Entity
 @Table(name = "reservas")
 public class Reserva {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer reserva;
-    @Column(nullable = false)
-    private String fecha;
-    @Column(nullable = false)
-    private String documento;
-    @Column(nullable = false)
-    private String mascota;
+    @Column(name = "id")
+    private Integer id;
 
+    @Column(name = "fecha")
+    private String fecha;
+
+    @ManyToOne
+    @JoinColumn(name = "mascota_id")
+    private Mascota mascota;
+
+    public Reserva(String fecha, Mascota mascota) {
+        this.fecha = fecha;
+        this.mascota = mascota;
+    }
 }

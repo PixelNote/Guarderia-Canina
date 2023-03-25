@@ -1,20 +1,29 @@
 package com.example.guarderia.datos;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name="clientes")
+@Table(name="cliente")
 public class Cliente {
     @Id
-    private String documento;
-    @Column(nullable = false)
+    @Column(name = "documento", nullable = false)
+    private Integer documento;
+    @Column(name = "nombre", nullable = false)
     private String nombre;
-    @Column(nullable = false)
+    @Column(name ="direccion", nullable = false)
     private String direccion;
-    @Column(nullable = false)
-    private String mascota;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Mascota> mascotas;
+
+    public Cliente(Integer documento, String nombre, String direccion){
+        this.documento = documento;
+        this.nombre = nombre;
+        this.direccion = direccion;
+    }
 }

@@ -1,11 +1,13 @@
 package com.example.guarderia.controlador.DTO;
+import com.example.guarderia.datos.Mascota;
 import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 public class ReservaDTO {
-    private Integer reserva;
     private String fecha;
-    private String documento;
     private String mascota;
+    private Integer documento;
+
 }
+

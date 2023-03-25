@@ -14,17 +14,23 @@ import java.util.List;
 @AllArgsConstructor
 public class ClienteControlador {
     private ServicioCliente servicio;
+
     @GetMapping("/clientes")
     public List<Cliente> obtenerClientes(){
         return servicio.obtenerClientes();
     }
+
+
     @PostMapping("/cliente")
     public Cliente guardarCliente(@RequestBody ClienteDTO clienteDTO){
         Cliente cliente = new Cliente(clienteDTO.getDocumento(),
-                                    clienteDTO.getNombre(),
-                                    clienteDTO.getDireccion(),
-                                    clienteDTO.getMascota());
+                clienteDTO.getNombre(),
+                clienteDTO.getDireccion()
+                );
         return servicio.agregarCliente(cliente);
     }
-
 }
+
+
+
+
