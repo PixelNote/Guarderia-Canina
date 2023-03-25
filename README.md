@@ -45,4 +45,4 @@ http://localhost:8088/fecha/{fecha}
 http://localhost:8088/documento/{documento}
 
 ## Diagrama de base de datos
-![Diagrama de base de datos](https://raw.githubusercontent.com/PixelNote/Guarderia-Canina/main/Diagrama.jpeg)
+![Diagrama de base de datos](https://raw.githubusercontent.com/PixelNote/Guarderia-Canina/main/src/main/resources/Diagrama.jpeg)
