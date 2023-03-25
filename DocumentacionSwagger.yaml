@@ -1,0 +1,220 @@
+---
+openapi: 3.0.0
+info:
+  title: Guarderia Canina
+  description: |
+    API para Guarderia Canina
+  contact:
+    name: Jimenez Puerto Pulido
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://localhost:8088
+tags:
+- name: clientes
+  description: Todo sobre los clientes
+- name: reservas
+  description: Todo sobre las reservas
+paths:
+  /cliente:
+    post:
+      tags:
+      - cliente
+      description: Añadir un nuevo cliente a la guarderia
+      parameters:
+      - name: documento
+        in: query
+        description: ID del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "1"
+      - name: nombre
+        in: query
+        description: Nombre del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: Pipe
+      - name: direccion
+        in: query
+        description: Direccion del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: Tocancipa
+      - name: mascota
+        in: query
+        description: Mascota del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: Pinky
+      responses:
+        "200":
+          description: Cliente guardado exitosamente
+        "400":
+          description: Cliente no se pudo guardar
+          content:
+            application/json:
+              schema:
+                type: string
+                example: '{"mensaje":"Error 404. Cliente no se pudo guardar"}'
+  /clientes:
+    get:
+      tags:
+      - clientes
+      description: Ver la lista de clientes
+      responses:
+        "200":
+          description: Mostrar lista de clientes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+  /reserva:
+    post:
+      tags:
+      - reserva
+      description: Añadir una reserva a la guarderia
+      parameters:
+      - name: fecha
+        in: query
+        description: Fecha de reserva
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: 4-03-23
+      - name: documento
+        in: query
+        description: Documento del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "1"
+      - name: mascota
+        in: query
+        description: Mascota del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: Pinky
+      responses:
+        "200":
+          description: Reserva guardada exitosamente
+        "400":
+          description: Reserva no se pudo guardar
+          content:
+            application/json:
+              schema:
+                type: string
+                example: '{"mensaje":"Error 404. Reserva no se pudo guardar"}'
+  /fecha:
+    get:
+      tags:
+      - reservas
+      summary: Reservas diarias
+      description: Mostrar las reservas para el dia especificado
+      parameters:
+      - name: fecha
+        in: query
+        description: Fecha de reserva
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: 4-03-23
+      responses:
+        "200":
+          description: reservas encontradas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/inline_response_200_1'
+        "400":
+          description: Esta fecha no tiene reservas
+          content:
+            application/json:
+              schema:
+                type: string
+                example: '{"mensaje":"Error 404. Fecha no encontrada"}'
+  /documento:
+    get:
+      tags:
+      - reservas
+      summary: Historial reservas
+      description: Mostrar historial de reservas por cliente
+      parameters:
+      - name: documento
+        in: query
+        description: documento del cliente
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "1"
+      responses:
+        "200":
+          description: historial de reservas encontrada
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+        "400":
+          description: Documento no encontrado
+          content:
+            application/json:
+              schema:
+                type: string
+                example: '{"mensaje":"Error 404. El cliente no existe"}'
+components:
+  schemas:
+    inline_response_200:
+      properties:
+        documento:
+          type: string
+          example: "1"
+        nombre:
+          type: string
+          example: Pipe
+        direccion:
+          type: string
+          example: Tocancipa
+        mascota:
+          type: string
+          example: Pinky
+    inline_response_200_1:
+      properties:
+        fecha:
+          type: string
+          example: 4-03-23
+        documento:
+          type: string
+          example: "1"
+        mascota:
+          type: string
+          example: Pinky
