@@ -35,3 +35,8 @@
 
 ## Diagrama de base de datos
 ![Diagrama de base de datos](https://raw.githubusercontent.com/PixelNote/Guarderia-Canina/main/src/main/resources/Diagrama.jpeg)
+
+## Coverage
+Usando Jacoco se verificó el coverage dispuesto por las pruebas de unitarias y de integración realizadas a los servcios y controladores de la guardería.
+<img width="463" alt="image" src="https://user-images.githubusercontent.com/101272542/230238601-529a1492-5c76-4484-bd60-cb3280e0e68f.png">
+![image](https://user-images.githubusercontent.com/101272542/230238629-f7fc28ea-9214-49fd-a5ee-615bcd037094.png)
