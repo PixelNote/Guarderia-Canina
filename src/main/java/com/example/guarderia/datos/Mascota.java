@@ -31,4 +31,9 @@ public class Mascota {
         this.cliente = cliente;
     }
 
+    public Mascota(int id, String nombre, Cliente cliente) {
+        this.id = id;
+        this.nombre = nombre;
+        this.cliente = cliente;
+    }
 }

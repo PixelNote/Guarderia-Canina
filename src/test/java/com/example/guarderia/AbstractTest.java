@@ -1,4 +1,4 @@
-package com.example.guarderia.util;
+package com.example.guarderia;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;

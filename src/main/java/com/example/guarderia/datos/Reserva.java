@@ -1,5 +1,6 @@
 package com.example.guarderia.datos;
 import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.*;
 
 @AllArgsConstructor
@@ -25,4 +26,12 @@ public class Reserva {
         this.fecha = fecha;
         this.mascota = mascota;
     }
+
+    public Reserva(int id, String fecha, Mascota mascota){
+        this.id = id;
+        this.fecha = fecha;
+        this.mascota = mascota;
+    }
+
+
 }
