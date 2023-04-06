@@ -1,7 +1,7 @@
 package com.example.guarderia.servicio;
-import com.example.guarderia.datos.Mascota;
-import com.example.guarderia.datos.Reserva;
-import com.example.guarderia.datos.Cliente;
+import com.example.guarderia.dato.Mascota;
+import com.example.guarderia.dato.Reserva;
+import com.example.guarderia.dato.Cliente;
 import com.example.guarderia.repositorio.IClienteRepositorio;
 import com.example.guarderia.repositorio.IMascotaRepositorio;
 import com.example.guarderia.repositorio.IReservaRepositorio;

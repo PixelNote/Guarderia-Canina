@@ -1,12 +1,11 @@
 package com.example.guarderia.servicio;
 
-import com.example.guarderia.datos.Cliente;
-import com.example.guarderia.datos.Mascota;
-import com.example.guarderia.datos.Reserva;
+import com.example.guarderia.dato.Cliente;
+import com.example.guarderia.dato.Mascota;
+import com.example.guarderia.dato.Reserva;
 import com.example.guarderia.repositorio.IClienteRepositorio;
 import com.example.guarderia.repositorio.IMascotaRepositorio;
 import com.example.guarderia.repositorio.IReservaRepositorio;
-import com.example.guarderia.servicio.ServicioReserva;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

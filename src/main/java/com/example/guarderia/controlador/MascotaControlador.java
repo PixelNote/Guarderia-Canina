@@ -1,11 +1,8 @@
 package com.example.guarderia.controlador;
 
-import com.example.guarderia.controlador.DTO.ClienteDTO;
 import com.example.guarderia.controlador.DTO.MascotaDTO;
-import com.example.guarderia.datos.Cliente;
-import com.example.guarderia.datos.Mascota;
+import com.example.guarderia.dato.Mascota;
 import com.example.guarderia.servicio.ServicioMascota;
-import com.example.guarderia.servicio.ServicioReserva;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

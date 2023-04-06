@@ -4,8 +4,8 @@ package com.example.guarderia.controlador;
 import com.example.guarderia.AbstractTest;
 import com.example.guarderia.controlador.DTO.ClienteDTO;
 import com.example.guarderia.controlador.DTO.MascotaDTO;
-import com.example.guarderia.datos.Cliente;
-import com.example.guarderia.datos.Mascota;
+import com.example.guarderia.dato.Cliente;
+import com.example.guarderia.dato.Mascota;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
-import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

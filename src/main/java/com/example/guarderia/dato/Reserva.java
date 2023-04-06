@@ -1,6 +1,5 @@
-package com.example.guarderia.datos;
+package com.example.guarderia.dato;
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.*;
 
 @AllArgsConstructor

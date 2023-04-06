@@ -1,6 +1,6 @@
 package com.example.guarderia.repositorio;
-import com.example.guarderia.datos.Mascota;
-import com.example.guarderia.datos.Reserva;
+import com.example.guarderia.dato.Mascota;
+import com.example.guarderia.dato.Reserva;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

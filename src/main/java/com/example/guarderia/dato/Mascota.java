@@ -1,4 +1,4 @@
-package com.example.guarderia.datos;
+package com.example.guarderia.dato;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

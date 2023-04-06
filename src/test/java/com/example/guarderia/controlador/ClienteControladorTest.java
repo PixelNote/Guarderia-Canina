@@ -3,7 +3,7 @@ package com.example.guarderia.controlador;
 
 import com.example.guarderia.AbstractTest;
 import com.example.guarderia.controlador.DTO.ClienteDTO;
-import com.example.guarderia.datos.Cliente;
+import com.example.guarderia.dato.Cliente;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

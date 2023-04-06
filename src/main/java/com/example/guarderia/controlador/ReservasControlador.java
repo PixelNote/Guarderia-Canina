@@ -1,7 +1,7 @@
 package com.example.guarderia.controlador;
 import com.example.guarderia.controlador.DTO.ReservaDTO;
-import com.example.guarderia.datos.Mascota;
-import com.example.guarderia.datos.Reserva;
+import com.example.guarderia.dato.Mascota;
+import com.example.guarderia.dato.Reserva;
 import com.example.guarderia.servicio.ServicioReserva;
 
 import lombok.AllArgsConstructor;

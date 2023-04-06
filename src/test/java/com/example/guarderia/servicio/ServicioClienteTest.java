@@ -1,6 +1,6 @@
 package com.example.guarderia.servicio;
 
-import com.example.guarderia.datos.Cliente;
+import com.example.guarderia.dato.Cliente;
 import com.example.guarderia.repositorio.IClienteRepositorio;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

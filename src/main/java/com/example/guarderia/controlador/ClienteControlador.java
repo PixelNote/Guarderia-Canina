@@ -1,6 +1,6 @@
 package com.example.guarderia.controlador;
 import com.example.guarderia.controlador.DTO.ClienteDTO;
-import com.example.guarderia.datos.Cliente;
+import com.example.guarderia.dato.Cliente;
 import com.example.guarderia.servicio.ServicioCliente;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

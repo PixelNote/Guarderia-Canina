@@ -1,5 +1,4 @@
 package com.example.guarderia.controlador.DTO;
-import com.example.guarderia.datos.Mascota;
 import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
