@@ -52,7 +52,6 @@ class MascotaControladorTest extends AbstractTest {
 
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-     //   Assertions.assertEquals(1, Objects.requireNonNull(responseEntity.getBody()).length);
 
     }
 
@@ -69,8 +68,6 @@ class MascotaControladorTest extends AbstractTest {
                         HttpMethod.GET,null, Mascota[].class);
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
-     //   Assertions.assertEquals(1, Objects.requireNonNull(responseEntity.getBody()).length);
 
     }
 
