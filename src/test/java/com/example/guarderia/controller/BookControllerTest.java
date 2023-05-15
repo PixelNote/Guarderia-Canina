@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BookingControladorTest extends AbstractTest {
+public class BookControllerTest extends AbstractTest {
 
     private static final String PATH_SAVE_RESERVATION = "/reservation";
     private static final String PATH_GET_RESERVATIONS = "/reservation/pets?date=";
