@@ -4,9 +4,8 @@ import lombok.*;
 @AllArgsConstructor
 @Data
 public class ClientDTO {
-    private Integer id;
+    private Integer document;
     private String name;
     private String address;
-
     private String email;
 }
