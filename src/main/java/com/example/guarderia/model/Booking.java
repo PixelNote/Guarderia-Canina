@@ -2,7 +2,8 @@ package com.example.guarderia.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,14 +16,18 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime date;
+    private LocalDate date;
+
+    private LocalTime time;
     @ManyToOne
     private Pet pet;
 
-    public Booking(LocalDateTime date, Pet pet) {
-        this.date = date;
-        this.pet = pet;
-    }
+    private String delivered;
 
+    public Booking(LocalDate date, LocalTime time, Pet pet) {
+        this.date = date;
+        this.time = time;
+        this.pet = pet;
+        this.delivered = "false";
+    }
 }

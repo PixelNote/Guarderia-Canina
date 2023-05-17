@@ -7,6 +7,7 @@ import com.example.guarderia.service.IBookingService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -16,23 +17,24 @@ public class BookingController {
 
     private IBookingService reservationService;
 
-    @PostMapping("/reservation")
+    @PostMapping("/booking")
     public Booking saveBooking(@RequestBody BookingDTO bookingDTO){
 
         return reservationService.saveBooking(bookingDTO.getDate(),
+                bookingDTO.getTime(),
                 bookingDTO.getPet(),
                 bookingDTO.getDocument());
     }
 
 
-    @GetMapping(path = "/reservation/pets")
-    public List<Pet> getPetsByDate(@RequestParam("date") String date){
+    @GetMapping(path = "/booking/pets")
+    public List<Pet> getPetsByDate(@RequestParam("date") LocalDate date){
 
         return reservationService.getPetsByDate(date);
     }
 
 
-    @GetMapping(path = "/reservation/id")
+    @GetMapping(path = "/booking/id")
     public List<Booking> getClientBookings(@RequestParam("userid") Integer id){
        return reservationService.getClientBookings(id);
     }

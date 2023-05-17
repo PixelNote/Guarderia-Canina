@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: h2:mem:test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+
+server:
+  port: 8088

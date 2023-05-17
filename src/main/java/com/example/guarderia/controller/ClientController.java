@@ -17,9 +17,10 @@ public class ClientController {
 
     @PostMapping("/client")
     public Client saveClient(@RequestBody ClientDTO clientDTO){
-        return clientService.saveClient(new Client(clientDTO.getId(),
+        return clientService.saveClient(new Client(clientDTO.getDocument(),
                 clientDTO.getName(),
-                clientDTO.getAddress()
+                clientDTO.getAddress(),
+                clientDTO.getEmail()
         ));
     }
 

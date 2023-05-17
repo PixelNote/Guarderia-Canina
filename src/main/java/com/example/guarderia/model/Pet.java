@@ -1,4 +1,5 @@
 package com.example.guarderia.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Pet {
     private String name;
     @ManyToOne
     private Client client;
+    @JsonIgnore
     @OneToMany(mappedBy = "pet")
     private List<Booking> bookings;
 

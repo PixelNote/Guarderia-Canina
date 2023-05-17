@@ -7,7 +7,9 @@ import com.example.guarderia.repository.BookingRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class BookingService implements IBookingService {
     private ClientRepository clientRepository;
 
 
-    public Booking saveBooking(LocalDateTime date, String mascota, Integer id){
+    public Booking saveBooking(LocalDate date, LocalTime time, String mascota, Integer id){
 
         List<Pet> pets = bookingRepository.findByDate(date);
 
@@ -32,10 +34,10 @@ public class BookingService implements IBookingService {
         if(pets.size()>0){
             throw new RuntimeException("Mascota ya esta registrada en esta fecha.");
         }
-        return bookingRepository.save(new Booking(date, petRepository.findByClientAndName(clientRepository.getClientByDocument(id),mascota)));
+        return bookingRepository.save(new Booking(date, time, petRepository.findByClientAndName(clientRepository.getClientByDocument(id),mascota)));
 
     }
-    public List<Pet> getPetsByDate(LocalDateTime date){
+    public List<Pet> getPetsByDate(LocalDate date){
         return bookingRepository.findByDate(date);
     }
 
