@@ -20,4 +20,6 @@ public interface BookingRepository extends JpaRepository<Booking,Integer> {
     List<Booking> findBookingsByDateAndDelivered(LocalDate date, String delivered);
 
     List<Booking> findBookingsByPet(Pet pet);
+
+    List<Booking> findBookingsByPetAndDate(Pet pet, LocalDate date);
 }
