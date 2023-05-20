@@ -21,20 +21,18 @@ public class BookingService implements IBookingService {
     private ClientRepository clientRepository;
 
 
-    public Booking saveBooking(LocalDate date, LocalTime time, String mascota, Integer id){
-
-        List<Pet> pets = bookingRepository.findByDate(date);
+    public Booking saveBooking(LocalDate date, LocalTime time, String pet, Integer id){
 
         if(bookingRepository.countByDate(date)>20){
             throw new RuntimeException("Excede el numero de reservas por dia.");
         }
-        if(petRepository.findPetsByClient(clientRepository.getClientByDocument(id))==null){
+        if(petRepository.findByClientAndName(clientRepository.getClientByDocument(id),pet)==null){
             throw new RuntimeException("Mascota no existe.");
         }
-        if(pets.size()>0){
+        if(bookingRepository.findBookingsByPetAndDate(petRepository.findPetByName(pet),date).size()>0){
             throw new RuntimeException("Mascota ya esta registrada en esta fecha.");
         }
-        return bookingRepository.save(new Booking(date, time, petRepository.findByClientAndName(clientRepository.getClientByDocument(id),mascota)));
+        return bookingRepository.save(new Booking(date, time, petRepository.findByClientAndName(clientRepository.getClientByDocument(id),pet)));
 
     }
     public List<Pet> getPetsByDate(LocalDate date){
