@@ -60,11 +60,12 @@ jacocoTestReport{
 	afterEvaluate {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, exclude: [
+					"**/config/*",
 					"**/model/**",
 					"**/repository/*",
 					"**/DTO/*",
 					"**/dto/*",
-					"**/rabbitmq/*",
+					"**/rabbitmq/NotificationDTO.class",
 					"**/guarderia/GuarderiaApplication.class"
 
 			])
