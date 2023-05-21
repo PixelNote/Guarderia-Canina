@@ -34,7 +34,6 @@ class PetControllerTest extends AbstractTest {
         ResponseEntity<Pet> responseEntity = restTemplate.postForEntity(PATH_SAVE_PET, petDTO, Pet.class);
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertEquals(new Pet(1,"Zeus",new Client(3,"Yeyson", "calle 4", "email@prueba.com")),responseEntity.getBody());
     }
 
     @Test

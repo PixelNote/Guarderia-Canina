@@ -15,15 +15,16 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BookControllerTest extends AbstractTest {
 
-    private static final String PATH_SAVE_RESERVATION = "/reservation";
-    private static final String PATH_GET_RESERVATIONS = "/reservation/pets?date=";
-    private static final String PATH_GET_CLIENT_RESERVATIONS = "/reservation/id?userid=";
+    private static final String PATH_SAVE_RESERVATION = "/booking";
+    private static final String PATH_GET_RESERVATIONS = "/booking/pets?date=";
+    private static final String PATH_GET_CLIENT_RESERVATIONS = "/booking/id?userid=";
     private static final String PATH_SAVE_CLIENT = "/client";
     private final static String PATH_SAVE_PET = "/pet";
 
@@ -34,9 +35,9 @@ public class BookControllerTest extends AbstractTest {
     public void given_mascota_existe_when_invoke_guardarReserva_then_guarda_reserva(){
         ClientDTO clientDTO = new ClientDTO(6,"Daniela", "calle 8", "email@prueba.com");
         restTemplate.postForEntity(PATH_SAVE_CLIENT, clientDTO, Client.class);
-        PetDTO petDTO = new PetDTO("Yiyo", 1);
+        PetDTO petDTO = new PetDTO("Yiyo", 6);
         restTemplate.postForEntity(PATH_SAVE_PET, petDTO, Pet.class);
-        BookingDTO bookingDTO = new BookingDTO(LocalDateTime.of(2023,5,20,14,30),"Yiyo",6);
+        BookingDTO bookingDTO = new BookingDTO(LocalDate.of(2023,5,30), LocalTime.of(18,50),"Yiyo",6);
         ResponseEntity<Booking> responseEntity = restTemplate
                 .postForEntity(PATH_SAVE_RESERVATION, bookingDTO, Booking.class);
 
@@ -54,9 +55,9 @@ public class BookControllerTest extends AbstractTest {
 
         ClientDTO clientDTO = new ClientDTO(7,"Sebas", "calle 9", "email@prueba.com");
         restTemplate.postForEntity(PATH_SAVE_CLIENT, clientDTO, Client.class);
-        PetDTO petDTO = new PetDTO("Satanas", 7);
+        PetDTO petDTO = new PetDTO("Pupu", 7);
         restTemplate.postForEntity(PATH_SAVE_PET, petDTO, Pet.class);
-        BookingDTO bookingDTO = new BookingDTO(LocalDateTime.of(2023,5,20,14,30), "Satanas", 7);
+        BookingDTO bookingDTO = new BookingDTO(LocalDate.of(2023,5,30), LocalTime.of(18,50),"Pupu",7);
         restTemplate.postForEntity(PATH_SAVE_RESERVATION, bookingDTO, Booking.class);
 
         ResponseEntity<Pet[]> responseEntity = restTemplate
@@ -75,7 +76,7 @@ public class BookControllerTest extends AbstractTest {
         restTemplate.postForEntity(PATH_SAVE_CLIENT, clientDTO, Client.class);
         PetDTO petDTO = new PetDTO("Rebecca", 8);
         restTemplate.postForEntity(PATH_SAVE_PET, petDTO, Pet.class);
-        BookingDTO bookingDTO = new BookingDTO(LocalDateTime.of(2023,5,20,14,30), "Rebecca", 8);
+        BookingDTO bookingDTO = new BookingDTO(LocalDate.of(2023,5,30), LocalTime.of(18,50),"Rebecca",8);
         restTemplate.postForEntity(PATH_SAVE_RESERVATION, bookingDTO, Booking.class);
 
         ResponseEntity<Booking[]> responseEntity = restTemplate
