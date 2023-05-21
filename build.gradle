@@ -55,14 +55,18 @@ jacocoTestReport{
 	reports{
 		xml.required  = false
 		csv.required = false
-		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+		html.outputLocation = layout.buildDirectory.dir('jacoco-output')
 	}
 	afterEvaluate {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, exclude: [
-					"**/dato/**",
-					"**/repositorio/*",
-					"**/DTO/*"
+					"**/model/**",
+					"**/repository/*",
+					"**/DTO/*",
+					"**/dto/*",
+					"**/rabbitmq/*",
+					"**/guarderia/GuarderiaApplication.class"
+
 			])
 		}))
 	}
