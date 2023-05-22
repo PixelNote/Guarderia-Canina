@@ -65,7 +65,7 @@ jacocoTestReport{
 					"**/repository/*",
 					"**/DTO/*",
 					"**/dto/*",
-					"**/rabbitmq/NotificationDTO.class",
+					"**/rabbitmq/*",
 					"**/guarderia/GuarderiaApplication.class"
 
 			])
