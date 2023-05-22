@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@CrossOrigin(origins = {"http://localhost:5173","http://localhost:8080"})
+@CrossOrigin(origins = {"http://front:8080"})
 public class BookingController {
 
     private IBookingService reservationService;
