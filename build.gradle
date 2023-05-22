@@ -60,10 +60,7 @@ jacocoTestReport{
 	afterEvaluate {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, exclude: [
-<<<<<<< HEAD
-=======
 					"**/config/*",
->>>>>>> 66381e0f8188727b3c6500e4677dbb5fad0659a5
 					"**/model/**",
 					"**/repository/*",
 					"**/DTO/*",
