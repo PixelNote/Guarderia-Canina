@@ -33,7 +33,6 @@ public class SendBookingService {
         if(!bookingList.isEmpty()) {
             bookingList.forEach(booking -> {
                 if (LocalTime.now().isAfter(booking.getTime()) && booking.getDelivered().equals("false")) {
-
                     rabbitTemplate.convertAndSend("notificationExchange", "message",
                             new NotificationDTO(
                                     booking.getPet().getClient().getName(),
