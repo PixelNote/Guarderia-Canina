@@ -52,3 +52,4 @@
 
 ## Coverage
 Usando Jacoco se verificó el coverage dispuesto por las pruebas unitarias y de integración realizadas a los servcios y controladores de la guardería.
+![WhatsApp Image 2023-05-25 at 3 09 52 AM](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/6bc81e09-b26b-4a93-b207-160725f5b7f8)
