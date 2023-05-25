@@ -1,4 +1,4 @@
-# API Rest Guarderia Canina
+# Bebitos Felices - Guarderia Canina, Proyecto Final
 
 ## Integrantes
 * Daniela Alejandra Puerto
@@ -6,13 +6,14 @@
 * Andrés Felipe Jiménez 
 
 ## Requerimientos
-*	Permitir registrar clientes con los siguientes atributos: Nombre, documento, Dirección de residencia, nombre mascota.
-*	El cliente debe poder reservar el espacio para su mascota a través de su número de documento y el día en que desea el servicio, el sistema debe validar que no se supere la capacidad permitida de la guardería por día que es de 20 perros.
-* El sistema debe permitir consultar los perros que estan programados para un día determinado
-*	El sistema debe permitir consultar las reservas que ha tenido un cliente en toda la historia
-*	Ahora, es necesario separar la creación del cliente y el de la mascota para permitir crear un cliente y posterior asociar mascotas que queden asociadas a ese cliente.
-*	Un cliente no podrá tener más de 2 mascotas y al momento de reservar se debe verificar que el usuario no tenga una mascota anteriormente reservada para ese día.
-*	Debe haber un endpoint que permita consultar a través de un número de documento las mascotas asociadas a un cliete.
+* El sistema permite registrar clientes, almacenando atributos como nombre, documento y dirección de residencia.
+* El sistema permite registrar una mascota, para posteriormente asociarla a un cliente, el cuál no puede tener más de 2 mascotas asociadas.
+* El cliente puede reservar el espacio para su mascota con su número de documento y el día en que desea el servicio, siempre y cuando no tenga otra mascota anteriormente reservada para ese día.
+* La guardería acepta máximo 20 reservas por día.
+* Se deben poder consultar los perros que estan programados para un día determinado.
+* Debe ser posible consultar el historial de reservas que ha tenido un cliente y las mascotas que tiene asociadas.
+* Un sistema de notificaciones asícnronas debe avisar a los clientes cuando sus mascotas están listas para ser recogidas.
+* Los usuarios reciben el mensaje en tiempo real a través de correo electrónico.
 ## Para ejecutar:
 *	Se requiere Java 19.
 ## Rutas:
@@ -33,8 +34,21 @@
 *	Para ver historial de reservas de un cliente:
 /documento		
 
-## Diagrama de base de datos
-![Diagrama de base de datos](https://raw.githubusercontent.com/PixelNote/Guarderia-Canina/main/src/main/resources/Diagrama.jpeg)
+## Vista de contexto
+![Diagramas - Página 1 (1)](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/a245297f-dd07-4ef1-b349-70d782c6b982)
+
+## Vista de contenedores
+![Diagramas - Página 1](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/14946699-290a-4679-b62f-8e5fdf04a032)
+
+## Vista de componente
+![Diagramas 2 (1)](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/6d6d3e30-6920-47ea-8e76-132028a37576)
+
+## Diagrama de paquetes
+![Diagrama en blanco](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/961b6d5f-2914-4cce-b0bf-321afb4edd8b)
+
+## Diagrama de despliegue
+
+## Diagrama de secuencia
 
 ## Coverage
 Usando Jacoco se verificó el coverage dispuesto por las pruebas unitarias y de integración realizadas a los servcios y controladores de la guardería.
