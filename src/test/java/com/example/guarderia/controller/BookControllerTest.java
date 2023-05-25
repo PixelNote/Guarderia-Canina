@@ -14,7 +14,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -44,8 +43,6 @@ public class BookControllerTest extends AbstractTest {
         System.out.println(responseEntity.getBody());
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
-
     }
 
     @Test
@@ -64,7 +61,6 @@ public class BookControllerTest extends AbstractTest {
                 .exchange(PATH_GET_RESERVATIONS +fecha, HttpMethod.GET, null, Pet[].class);
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
     }
 
     @Test
@@ -83,7 +79,5 @@ public class BookControllerTest extends AbstractTest {
                 .exchange(PATH_GET_CLIENT_RESERVATIONS +documento, HttpMethod.GET, null, Booking[].class);
 
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
     }
-
 }
