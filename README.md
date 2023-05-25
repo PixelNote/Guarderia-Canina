@@ -52,8 +52,3 @@
 
 ## Coverage
 Usando Jacoco se verificó el coverage dispuesto por las pruebas unitarias y de integración realizadas a los servcios y controladores de la guardería.
-
-![image](https://user-images.githubusercontent.com/101272542/230238944-687ae9ff-125b-4594-9fd3-76f9fc411406.png)
-
-![image](https://user-images.githubusercontent.com/101272542/230238955-2308647b-a7a1-4151-9a2c-4efd092fa9d2.png)
-
