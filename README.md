@@ -47,6 +47,7 @@
 ![Diagrama en blanco](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/961b6d5f-2914-4cce-b0bf-321afb4edd8b)
 
 ## Diagrama de despliegue
+![Diagrama de secuencia básico](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/ad6af0dc-e339-4bf8-a0c1-696f60ade11e)
 
 ## Diagrama de secuencia
 ![Diagrama de secuencia básico](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/baf4722b-d8ce-423b-a3e1-6673e5778e20)
