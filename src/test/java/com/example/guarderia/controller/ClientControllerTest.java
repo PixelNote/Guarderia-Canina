@@ -1,6 +1,5 @@
 package com.example.guarderia.controller;
 
-
 import com.example.guarderia.AbstractTest;
 import com.example.guarderia.controller.DTO.ClientDTO;
 import com.example.guarderia.model.Client;
@@ -11,7 +10,6 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import static org.aspectj.util.LangUtil.isEmpty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -42,8 +40,5 @@ public class ClientControllerTest extends AbstractTest {
         Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         Client[] clients = responseEntity.getBody();
         Assertions.assertFalse(isEmpty(clients));
-
     }
-
-
 }
