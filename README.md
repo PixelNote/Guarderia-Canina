@@ -49,6 +49,7 @@
 ## Diagrama de despliegue
 
 ## Diagrama de secuencia
+![Diagrama de secuencia básico](https://github.com/PixelNote/Guarderia-Canina/assets/101272542/baf4722b-d8ce-423b-a3e1-6673e5778e20)
 
 ## Coverage
 Usando Jacoco se verificó el coverage dispuesto por las pruebas unitarias y de integración realizadas a los servcios y controladores de la guardería.
